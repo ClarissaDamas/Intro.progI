@@ -7,8 +7,13 @@ class clientes:
         self.saldo = saldo
         print(self.conta,self.nome,self.saldo)
     def cliente(self):
-        print(self.conta,self.nome,self.saldo) #essa segunda aparentemente nao roda
+        print(self.conta,self.nome,self.saldo) 
+        print('escada')#essa segunda aparentemente nao roda
 
-Mariana = clientes('110','Mariana','30')
-Vitor = clientes('110','Vitor','30')
-
+while i <= 15:
+    nome = input('qual seu nome?')
+    saldo = input('quanto voce tem na conta?')
+    clientes(i,nome,saldo)
+    i += 1
+print('fim')
+clientes()
