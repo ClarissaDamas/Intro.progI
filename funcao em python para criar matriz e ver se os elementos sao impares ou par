@@ -1,0 +1,37 @@
+def Par(matriz, quantidade_pares = 0):
+    for linha in matriz:
+        for numero in linha:
+            if numero % 2 == 0:
+                quantidade_pares = quantidade_pares + 1
+    return quantidade_pares
+
+def SomaImpar(matriz, soma_impares = 0):
+    for linha in matriz:
+        for numero in linha:
+            if numero % 2 != 0:
+                soma_impares = soma_impares + numero
+    return soma_impares
+
+
+matriz = []
+contador = 1
+i = 0
+while i < 30:
+    linha = []
+    j = 0
+    while j < 14:
+        linha.append(contador) #o append vai adicionar na lista
+        contador = contador + 1
+        j = j+ 1
+    matriz.append(linha)
+    i = i + 1
+
+for linha in matriz:
+    print(linha)
+
+quantidade_pares = Par(matriz) #chamei a funcao
+soma_impares = SomaImpar(matriz)
+
+
+print("Quantidade de elementos pares com a funcao dos numeros pares", quantidade_pares)
+print("Soma dos elementos ímpares coma  funcao somar", soma_impares)
